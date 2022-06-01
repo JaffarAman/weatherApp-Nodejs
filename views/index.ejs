@@ -22,12 +22,19 @@
         <input type="text" placeholder="Enter a City" name="city" />
       </form>
       <div class="weatherDetails">
-        <h1>25.55</h1>
+        <% if(temp !== null){%>
+        <h1><%= temp%></h1>
+        <%}%>
         <div class="icon">
-          <img src="http://openweathermap.org/img/w/04n.png" alt="" />
-          <h3>haze</h3>
+          <% if(icon !== null){%> <img src="http://openweathermap.org/img/w/<%=
+          icon %>.png" alt=''" /> <%}%> <% if(des !== null){%>
+          <h1><%= des%></h1>
+          <%}%>
         </div>
-        <h3>Karachi</h3>
+        <!-- <h3>Karachi</h3> -->
+        <% if(city !== null){%>
+        <h1><%= city%></h1>
+        <%}%>
       </div>
     </div>
   </body>

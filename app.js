@@ -5,6 +5,7 @@ const Router = require("./routes/weather");
 
 //middleware
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 //use view engine
 app.set("view engine", "ejs");
